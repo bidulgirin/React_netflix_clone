@@ -19,11 +19,17 @@ export default function Row({ title, fetchUrl, isLargeRow, id }) {
     <section className="row">
       <h2>{title}</h2>
       <div className="slider">
-        <div className="slider_arrow-left">
+        <div
+          className="slider_arrow-left"
+          onClick={() => {
+            document.getElementById(id).scrollLeft -= window.innerWidth - 80;
+          }}
+        >
           <span className="arrow">{"<"}</span>
         </div>
         <div id={id} className="row_posters">
-          {movies && //로드 되기 전에 요청하면 오류나서 이렇게 처리함
+          {/*로드 되기 전에 요청하면 오류나서 이렇게 처리함*/}
+          {movies &&
             movies.map((movie) => (
               <img
                 key={movie.id}
@@ -36,7 +42,12 @@ export default function Row({ title, fetchUrl, isLargeRow, id }) {
               />
             ))}
         </div>
-        <div className="slider_arrow-right">
+        <div
+          className="slider_arrow-right"
+          onClick={() => {
+            document.getElementById(id).scrollLeft += window.innerWidth - 80;
+          }}
+        >
           <span className="arrow">{">"}</span>
         </div>
       </div>
