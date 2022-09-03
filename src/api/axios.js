@@ -3,7 +3,7 @@ import axios from "axios";
 const instance = axios.create({
   baseURL: "https://api.themoviedb.org/3/", //반복될 url
   params: {
-    api_key: "14692c3b9823f91e6ab2ca6c54b1af7e",
+    api_key: process.env.REACT_APP_MOVIE_DB_API,
     language: "ko-KR",
   },
 });
