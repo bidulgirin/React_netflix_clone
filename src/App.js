@@ -1,3 +1,5 @@
+import React, { useState, useEffect } from "react";
+
 import requests from "./api/request";
 import "./App.css";
 import Banner from "./components/Banner";
