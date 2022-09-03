@@ -7,7 +7,10 @@ import reportWebVitals from "./reportWebVitals";
 import "./index.css";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <BrowserRouter>
+  <BrowserRouter
+    basename="
+  React_netflix_clone"
+  >
     <App />
   </BrowserRouter>
 );
